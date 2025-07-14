@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="author" content="Lê Anh Minh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days" />
+    <meta property="og:type" content="website" />
+    <title>Key Free - LAMDev</title>
+
+    <!-- Mã quảng cáo Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+
+    <!-- Mã quảng cáo Aclib -->
+    <script async type="text/javascript" src="https://acscdn.com/script/aclib.js"></script>
+
+    <style>
+        /* Định nghĩa hiệu ứng chữ chạy màu cầu vồng */
+        @keyframes runningColor {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Nút sao chép */
+        .copy-button {
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px 15px;
+            border-radius: 5px;
+            background-color: #FF66B2; /* Màu nền nút */
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            position: relative;  /* Để giữ cấu trúc nút */
+            overflow: hidden;
+            border: 2px dashed #FFD700;
+            border-radius: 20px;
+            margin: 20px 20px 10px; /* Cách lề trái và phải 20px */
+            padding: 0px;  /* Khoảng cách giữa nội dung và viền */
+        }
+
+        /* Phần chữ có hiệu ứng gradient màu cầu vồng */
+        .copy-button span {
+            display: block;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);        
+            background-size: 400% 400%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: runningColor 3s linear infinite; /* Thời gian và cách thức chạy */
+            font-weight: bold;
+        }
+
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+
+        body {
+                margin: 0;
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                color: rgb(170, 170, 170);
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.7);
+                background-size: cover; /* Ảnh nền mở rộng vừa màn hình */
+                background-attachment: fixed; /* Ảnh nền cố định */
+                background-position: center;
+                overflow-y: auto; /* Cuộn trang nếu nội dung dài */
+                padding: 10px 10px 10px;  /* Khoảng cách giữa nội dung và viền */
+            }
+
+            /* Lớp phủ mờ cho nội dung */
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3); /* Màu phủ mờ */
+                z-index: -1;
+            }
+
+        h1, h2, h3, .button {
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 3px #000, 0 0 5px #000;
+            line-height: 1.5; /* Giảm khoảng cách giữa các dòng */
+            margin: 0 20px; /* Cách lề trái và phải 20px */
+            
+            border: 2px dashed #FFD700;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.3); /* Màu nền mờ đen */
+            padding: 10px 10px 10px;  /* Khoảng cách giữa nội dung và viền */
+        }
+
+        .button {
+            background-color: #4c56af;
+            width: 80%;
+            max-width: 300px;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border-radius: 15px;
+            box-shadow: 
+                2px 2px 20px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 4px rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            margin: 20px auto;
+        }
+
+        .button:hover {
+            background-color: #3a4796;
+        }
+
+        .links {
+            margin: 0 20px; /* Cách lề trái và phải 20px */
+            padding: 10px;  /* Khoảng cách giữa nội dung và viền */
+            border: 2px dashed #FFD700;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 2;
+            background-color: rgba(0, 0, 0, 0.3); /* Màu nền mờ đen */
+        }
+
+        .links a {
+            color: rgb(204, 199, 221);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            footer a {
+                color: #FFD700;
+                text-decoration: none;
+            }
+
+        .play-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .play-button:hover {
+            background-color: #45a049;
+        }
+        .notice {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding: 5px;
+                border: 2px dashed #FFD700;
+                background: linear-gradient(45deg, #FF5733, #FFC300, #28A745, #007BFF);
+                background-size: 400% 350%;
+                color: #fff;
+                animation: gradientBG 3s infinite;
+                border-radius: 20px;
+                /*font-size: 50px; /*nudun bóng*/
+                color: #FF0000; /*nudun bóng*/
+                text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6); /*nudun bóng*/
+                width: center;  /* Đặt chiều rộng */ 
+                height: 50px; /* Đặt chiều cao */
+                margin: 50px 20px 10px; /* Cách lề trái và phải 20px */
+                padding: 10px 10px 10px;  /* Khoảng cách giữa nội dung và viền */
+            }
+
+            @keyframes gradientBG {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+
+        </style>    
+</head>
+
+<body>
+    <!-- Quảng cáo Google đầu trang -->
+    <div style="text-align:center; margin: 20px 0;">
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7754095483898955"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <h2 class="notice" style="color: #e03131;">Web Và Tool Được Phát Triển Bởi<br>Lê Anh Minh - 🇻🇳AminTeam✔🇻🇳</h2><br>
+    <h3 style="color: #00ff00;">Chúc Mừng<br>Bạn Đã Vượt Key Thành Công!!!</h3><br>
+    <h3 style="color: #ffd300;">Cảm Ơn Bạn Đã Vượt Link ❤.<br>Chúc Bạn Một Ngày Tốt Lành !</h3>
+    <br>
+
+    <!-- Quảng cáo Aclib giữa trang -->
+    <div style="text-align:center; margin: 20px 0;">
+        <script type="text/javascript">
+            aclib.runAutoTag({
+                zoneId: 'zwekvcw3gq',
+            });
+        </script>
+    </div>
+
+    <!-- Thêm nhạc nền -->
+    <audio id="music" loop autoplay>
+        <source id="musicSource" src="https://files.catbox.moe/rxgkgw.mp3" type="audio/mp3">
+        Trình duyệt của bạn không hỗ trợ phần tử audio.
+    </audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div class="links">
+        <p style="color: #00ff00;"><strong>Wed tăng tương tác:</strong> <a style="color: #afffff;" href="https://likevietsub.site" target="_blank">✧Click vào đây✧</a></p>
+        <p style="color: #00ff00;"><strong>Wed bán 4G VPN:</strong> <a style="color: #afffff;" href="https://4gvpngiare.shop" target="_blank">✧Click vào đây✧</a></p>
+        <p style="color: #00ff00;"><strong>Trang profile :</strong> <a style="color: #afffff;" href="https://leanhminh.io.vn" target="_blank">✧Click vào đây✧</a></p>
+        <p style="color: #00ff00;"><strong>Full wed của mình:</strong> <a style="color: #afffff;" href="https://leanhminh.x10.mx/fullwed" target="_blank">✧Click vào đây✧</a></p>
+        <p style="color: #00ff00;"><strong>Full MXH của mình:</strong> <a style="color: #afffff;" href="https://leanhminh.io.vn/info" target="_blank">✧Click vào đây✧</a></p>
+    </div><br>
+        
+ 
+    <!-- Nút sao chép với chữ chạy màu cầu vồng -->
+    <button class="copy-button" id="copyButton" onclick="copyToClipboard()">
+    <span style="margin: 20px 20px 20px;padding: 10px 10px 10px;"><strong>CLICK VÀO ĐÂY ĐỂ TỰ ĐỘNG SAO CHÉP KEY</strong></span>
+    </button><br>
+
+    <script>
+    	
+        // Hàm sao chép key vào clipboard
+        function copyToClipboard() {
+            // Lấy key từ URL
+            var params = new URLSearchParams(window.location.search);
+            var key = params.get("key"); // Lấy giá trị của tham số key
+            
+            if (!key) {
+                alert("Không tìm thấy key trong URL!");
+                return;
+            }
+
+            // Tạo phần tử input tạm để sao chép
+            var $temp = document.createElement("input");
+            document.body.appendChild($temp);
+            $temp.value = key;
+            $temp.select();
+            document.execCommand("copy");
+            $temp.remove();
+
+            // Thông báo đã sao chép
+            alert("Bạn đã copy key: " + key);
+        }
+    
+
+        // Chọn nhạc nền ngẫu nhiên từ danh sách
+        const musicLinks = [
+            "https://api.leanhminh.x10.mx/file_music"
+        ];
+        
+
+        // Chọn nền ngẫu nhiên từ danh sách
+        // Kiểm tra kích thước màn hình để xác định thiết bị
+		const isMobile = window.innerWidth <= 768; // Thường màn hình điện thoại có chiều rộng <= 768px
+		
+		// Danh sách ảnh nền cho điện thoại và laptop
+		const mobileBackgroundLinks = [
+		    "https://api.leanhminh.x10.mx"
+		];
+		
+		const laptopBackgroundLinks = [
+		    "https://api.leanhminh.x10.mx/link_music"
+		];
+		
+		// Chọn nền ngẫu nhiên từ danh sách tương ứng với thiết bị
+		const backgroundLinks = isMobile ? mobileBackgroundLinks : laptopBackgroundLinks;
+		var randomBackground = backgroundLinks[Math.floor(Math.random() * backgroundLinks.length)];
+		
+		// Đặt nền ngẫu nhiên
+		document.body.style.backgroundImage = "url('" + randomBackground + "')";		
+    </script>
+
+    <p style="color: #ffff00; background-color: rgba(0, 0, 0, 0.3); border: 2px dashed #FFD700; border-radius: 10px; padding: 10px 10px 10px; margin: 50px 20px 10px; ">
+        Copyright © 2024 <a href="https://leanhminh.io.vn">Le Anh Minh</a> | Version 1.1.0 <br>
+        All Rights Reserved By 🇻🇳AminTeam✔🇻🇳
+    </p>
+
+    <!-- Nhạc nền (bản thứ hai, giữ nguyên như gốc) -->
+    <audio id="music" loop>
+        <source id="musicSource" type="audio/mp3">
+        Trình duyệt không hỗ trợ audio.
+    </audio>
+
+    <script>
+        // Danh sách nhạc ngẫu nhiên
+        var randomMusic = musicLinks[Math.floor(Math.random() * musicLinks.length)];
+        // Đặt nguồn nhạc ngẫu nhiên
+        var music = document.getElementById("music");
+        var musicSource = document.getElementById("musicSource");
+        musicSource.src = randomMusic;
+        music.load(); // Tải lại nhạc để đảm bảo chuẩn bị trước khi phát
+
+        // Biến để kiểm soát phát nhạc chỉ 1 lần
+        let isMusicPlaying = false;
+        // Phát nhạc khi người dùng nhấn vào màn hình lần đầu
+        document.body.addEventListener("click", function() {
+            if (!isMusicPlaying) {
+                music.play();
+                isMusicPlaying = true; // Đánh dấu rằng nhạc đã được phát
+            }
+        });
+    </script>
+
+    <!-- Quảng cáo Google cuối trang -->
+    <div style="text-align:center; margin: 20px 0;">
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1234567890123456"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer>
+        © 2025 Lê Anh Minh - All rights reserved | <a href="https://leanhminh.io.vn">leanhminh.io.vn</a>
+    </footer>
+</body>
+</html>
